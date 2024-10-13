@@ -82,6 +82,7 @@ for ($i = 0; $i < count($list_query); $i++) {
     else{
         echo "failed\n";
     }
+    sleep(10);
 }
 echo "\n[*] All Done!, Waiting 60 min\n";
 sleep(3600);
