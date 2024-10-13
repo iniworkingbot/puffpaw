@@ -50,6 +50,18 @@ for ($i = 0; $i < count($list_query); $i++) {
                     $c = $a + 1;
                     echo "[-] Item $c : ".collect_item($check[$a]['slot'], $list_query[$i])."\n";
                 }
+                $start = start_game($list_query[$i]);
+                echo "[*] Start Game : ";
+                if($start['endTime']){
+                    echo "success\n";
+                    $time = check_status($list_query[$i]);
+                    echo "[*] Wait Time : ".time_remain($time['endTime'])." second\n";
+                }
+                else{
+                    echo "failed\n";
+                    $time = check_status($list_query[$i]);
+                    echo "[*] Wait Time : ".time_remain($time['endTime'])." second\n";
+                }
             }
             else{
                 echo "failed\n";
