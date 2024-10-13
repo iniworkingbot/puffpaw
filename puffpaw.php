@@ -83,8 +83,8 @@ for ($i = 0; $i < count($list_query); $i++) {
         echo "failed\n";
     }
 }
-echo "\n[*] All Done!, Waiting 30 min\n";
-sleep(1800);
+echo "\n[*] All Done!, Waiting 60 min\n";
+sleep(3600);
 goto Awal;
 
 
